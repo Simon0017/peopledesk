@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: when <html> has class="dark", every dark: variant applies. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * Semantic colour tokens. Each one becomes a utility: bg-canvas, bg-surface,
+   * border-line, text-fg, text-fg-muted... Components use these names instead of
+   * raw colours, so dark mode is handled by swapping the variables below.
+   */
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-line: #e2e8f0;
+  --color-fg: #0f172a;
+  --color-fg-muted: #64748b;
+}
+
+@layer base {
+  /* Dark theme: same token names, different values. */
+  .dark {
+    --color-canvas: #020617;
+    --color-surface: #0f172a;
+    --color-surface-muted: #1e293b;
+    --color-line: #1e293b;
+    --color-fg: #f1f5f9;
+    --color-fg-muted: #94a3b8;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-canvas text-fg;
+  }
+}
