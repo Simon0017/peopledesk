@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { useScrolled } from "@/hooks/useScrolled";
 import { cn } from "@/lib/cn";
 import { ThemeToggle } from "./ThemeToggle";
+import { UserMenu } from "./UserMenu";
 
 export function Topbar({ onOpenMobileNav }) {
   const isScrolled = useScrolled();
@@ -19,6 +20,7 @@ export function Topbar({ onOpenMobileNav }) {
       </Button>
       <div className="flex-1" />
       <ThemeToggle />
+      <UserMenu />
     </header>
   );
 }
