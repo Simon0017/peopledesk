@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 *.env
 personal_notes.md
+android
+
+.env.mobile

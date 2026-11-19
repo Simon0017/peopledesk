@@ -1,0 +1,9 @@
+{
+  "appId": "com.peopledesk.app",
+  "appName": "PeopleDesk",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true
+  }
+}
